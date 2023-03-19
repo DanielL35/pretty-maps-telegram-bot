@@ -8,7 +8,7 @@ def generate_png(coords):
     generates a map from coordinates and saves it as a file
     """
 
-    plot = prettymaps.plot(
+    plt = prettymaps.plot(
         (coords),
         circle = True,
         radius = 500,
@@ -104,10 +104,13 @@ def generate_png(coords):
     )
 
     filename = uuid.uuid4().hex
-    plot.fig.savefig('{}.png'.format(filename))
+    plt.fig.savefig('{}.png'.format(filename))
 
+    # empty cache
+    
+    
     return filename
 
-test_coords = (52.47643583435979, 13.43871614431018)
+#test_coords = (52.47643583435979, 13.43871614431018)
 
-test_filename = generate_png(test_coords)
+#test_filename = generate_png(test_coords)
